@@ -8,22 +8,51 @@ html *
 }
 #INPUT 
 {
-    border: none; 
+    border-color: black;
     color: black;
-    font-family: monospace;
+    font-family: arial;
     height: 1in;
     overflow: auto;
-    /* padding: 0.5em; */
-    width: 80%;
-    background-color: #66FFCC; 
+    width: 50%;
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    border-width:5px;
 }
 body { background-color: #99FFFF; }
+
 #OUTPUT 
 {
-    background-color: #66FFCC; 
-    width: 80%;
+    border-color: black;
+    background-color: white; 
+    width: 50%;
+    color: black;
+    border-width:5px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
+h1 {
+	color: black;
+	text-align: center;
+	font-size: 300%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+	color: black;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttons {
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
 a {
   font-size: x-large;
@@ -38,8 +67,6 @@ a:hover{
 }
 a:active {color:#0000FF;}  /* selected link */
 
-
-
 nav {
     text-align: center;
 }
@@ -50,13 +77,44 @@ nav li {
     margin: 0 1em;
 }
 
+button{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+p{
+	vertical-align: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div{
+	vertical-align: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+ 
 .mylink {
-  background-color: #66FFCC;
+  background-color: white;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  border: 5px solid #009900;
+  border: 5px solid black;
   padding: 5px;
+}
+.mylink:hover{
+  background-color:black; 
+  color: #FFF;
 }
 
 /* Supress borders after the button is pressed */
 #PARSE:focus {outline:0; }
+
+#PARSE {
+	display:block;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
