@@ -1,7 +1,5 @@
 task :default do
-  #sh "a2ps --columns=1 -f 8 -R *.js *.html -o out.ps"
-  sh "a2ps --columns=1 -f 8 -R index.html -o out.ps"
-  sh "ps2pdf out.ps out.pdf"
+  sh "ruby app.rb"
 end
 
 task :clean do
