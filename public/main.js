@@ -17,9 +17,14 @@ Object.constructor.prototype.error = function (message, t) {
 
 function main() {
     var parse = make_parse();
-
-    var source = INPUT.value;
+	var source = INPUT.value;
     var string, tree;
+	
+	if (window.localStorage)
+    {
+		localStorage.INPUT = INPUT.value; 
+	}
+	
     try {
         tree = parse(source);
         //string = JSON.stringify(tree, ['type', 'value', 'from', 'to'],  4);
@@ -30,8 +35,15 @@ function main() {
                 'value', 'arity', 'first', 'second', 'third', 'fourth'], 4);
     }
     OUTPUT.innerHTML = string.replace(/&/g, '&amp;').replace(/[<]/g, '&lt;');
+	
+	
 };
 
 window.onload = function() {
-  PARSE.onclick = main;
+	if (window.localStorage)
+    {
+		INPUT.value = localStorage.INPUT; 
+	}
+
+	PARSE.onclick = main;
 }
